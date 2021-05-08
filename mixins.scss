@@ -1,0 +1,29 @@
+@mixin flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+@mixin absolute-container {
+    position: relative;
+    &:first-child {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+};
+
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+};
+
+
+
+@mixin flex-float{
+   display: flex;
+   &>*{
+     flex-shrink: 0;
+   }
+}
