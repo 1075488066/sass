@@ -2,28 +2,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-};
+}
 
 @mixin absolute-container {
     position: relative;
-    &:first-child {
+    & > * {
         position: absolute;
+    }
+    &:first-child {
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
-};
+}
 
-@mixin wh($w, $h) {
-    width: $w;
-    height: $h;
-};
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
 
+@mixin text-center($height) {
+    text-align: center;
+    line-height: $height;
+    height: $height;
+}
 
-
-@mixin flex-float{
-   display: flex;
-   &>*{
-     flex-shrink: 0;
-   }
+@mixin flex-float {
+    display: flex;
+    & > * {
+        flex-shrink: 0;
+    }
 }

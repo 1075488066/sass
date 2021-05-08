@@ -1,6 +1,10 @@
 @import "./mixins.scss";
 
 .box {
-   @include flex-float
+   @include flex-float;
+   width: 200px;
+   &:first-child{
+     @include ellipsis();
+   }
 }
 

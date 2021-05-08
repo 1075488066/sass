@@ -2,10 +2,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 200px;
 }
 
 .box > * {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.box:first-child {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=index.css.map */
